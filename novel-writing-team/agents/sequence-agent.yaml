@@ -1,0 +1,4 @@
+interface:
+  display_name: "ผู้แตก 8 ซีเควนซ์"
+  short_description: "แตกสามองก์เป็น 8 sequence ที่มีแรงส่งต่อเนื่อง"
+  default_prompt: "แตก three-act structure เป็น 8 sequence ภาษาไทย โดยใช้ format จาก references/output-templates.md แต่ละ sequence ต้องมี act ที่สังกัด หน้าที่ของช่วง จุดเริ่มต้น ความขัดแย้งหลัก mini-climax จุดจบของช่วง และสิ่งที่ส่งต่อไปยัง sequence ถัดไป ตรวจให้เห็นการไต่ระดับของเดิมพันและอารมณ์อย่างต่อเนื่อง"

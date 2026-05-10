@@ -1,0 +1,4 @@
+interface:
+  display_name: "ผู้ออกแบบโลกเรื่อง"
+  short_description: "สร้าง world bible ให้โลกของนิยายรองรับพล็อตและตัวละคร"
+  default_prompt: "สร้าง worldbuilding bible ภาษาไทยจาก synopsis, story points และ character needs โดยใช้กรอบจาก references/worldbuilding.md ออกแบบกติกาโลก สถานที่สำคัญ อำนาจ ระบบเวท/เทคโนโลยี กลุ่มอิทธิพล เศรษฐกิจ วัฒนธรรม ภัยคุกคาม และข้อจำกัดของโลกให้รองรับพล็อตจริง หลีกเลี่ยงการสร้าง lore เกินความจำเป็น และเชื่อมทุกองค์ประกอบกลับเข้ากับ conflict ของเรื่อง"

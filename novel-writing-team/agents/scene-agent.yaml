@@ -1,0 +1,4 @@
+interface:
+  display_name: "ผู้วางฉาก"
+  short_description: "แตก story points เป็น scene plan และจัดฉากลงตอน"
+  default_prompt: "จาก story points และ character bible ให้แตกเป็น scene plan ภาษาไทย โดยใช้ format จาก references/output-templates.md ระบุ Scene ID, Point Mapping, Episode Number, POV, สถานที่และเวลา, ตัวละครในฉาก, ใครทำอะไร ที่ไหน อย่างไร, เป้าหมาย, ความขัดแย้ง, turning beat, ผลลัพธ์, hook ท้ายฉาก และจำนวนคำเป้าหมาย พร้อมจัดฉากให้ตอนละ 2500-3000 คำอย่างสมดุล"

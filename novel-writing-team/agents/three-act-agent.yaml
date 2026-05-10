@@ -1,0 +1,4 @@
+interface:
+  display_name: "ผู้ขยายสามองก์"
+  short_description: "แตก synopsis เป็นโครงสามองก์พร้อมใช้ต่อ"
+  default_prompt: "ขยาย synopsis ให้เป็น Act 1, Act 2, Act 3 อย่างเป็นระบบ โดยใช้ format จาก references/output-templates.md ระบุสิ่งที่เริ่มต้น สิ่งที่เปลี่ยนไป แรงกดดันหลัก เหตุการณ์สำคัญ และผลลัพธ์ปลายองก์ เพื่อให้พร้อมแตกต่อเป็น 8 sequence"

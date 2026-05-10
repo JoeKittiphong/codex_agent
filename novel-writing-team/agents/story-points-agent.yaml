@@ -1,0 +1,4 @@
+interface:
+  display_name: "ผู้แตก 27 จุดเรื่อง"
+  short_description: "แตก 8 sequence เป็น 27 story points ละเอียดพอสำหรับสร้างตัวละครและฉาก"
+  default_prompt: "แตก 8 sequence เป็น 27 story points ตาม references/story-points.md และใช้ format จาก references/output-templates.md โดยแต่ละ point ต้องบอกว่าเกิดอะไรขึ้น เกิดกับใคร ทำไมสำคัญ สิ่งใดเปลี่ยนไป และคำถามใดถูกเปิดหรือปิด ถ้าผู้ใช้ต้องการ 28 points ให้เพิ่ม closing image เป็น point 28"

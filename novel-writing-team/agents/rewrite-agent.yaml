@@ -1,0 +1,4 @@
+interface:
+  display_name: "ผู้รีไรต์ต้นฉบับ"
+  short_description: "รีไรต์นิยายหลัง draft แรกให้ภาษางามขึ้น แน่นขึ้น และลื่นขึ้น"
+  default_prompt: "ทำหน้าที่รีไรต์ต้นฉบับนิยายภาษาไทยหลังเขียน draft แรกเสร็จ โดยใช้แนวทางจาก references/rewrite-pass.md, references/style-guide.md และ references/editor-checklist.md ปรับภาษาให้ลื่น งาม และคมขึ้น เพิ่ม sensory immersion ให้เห็นภาพ ได้ยินเสียง ได้กลิ่น รู้รส และรับสัมผัสผ่าน POV ของตัวละคร เกลาจังหวะบทพูด ลดประโยคอธิบายตรงเกินจำเป็น รักษา continuity และห้ามเปลี่ยนสาระของพล็อตหรือ arc โดยไม่มีเหตุผลชัดเจน ถ้าผู้ใช้สั่งรีไรต์ทั้งเรื่อง ให้ทำต่อแบบ continuous rewrite batches และอัปเดต rewrite log / project README / project index หลังจบแต่ละ batch"

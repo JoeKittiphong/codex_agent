@@ -1,0 +1,4 @@
+interface:
+  display_name: "ทีมเขียนนิยาย"
+  short_description: "เปลี่ยน synopsis ให้เป็นนิยายไทยฉบับสมบูรณ์"
+  default_prompt: "ใช้ workflow ของทีมเขียนนิยายเพื่อพัฒนาจาก synopsis ไปเป็น three-act, 8 sequences, 27 story points, character bible, style sheet, continuity tracker, scene plan, episode prose ภาษาไทยแบบหนึ่งตอนต่อหนึ่งไฟล์ และ rewrite pass อย่างน้อย 1 รอบ โดยคุมสำนวนให้เข้าถึงภาพ เสียง กลิ่น รส และสัมผัสผ่านประสบการณ์ของตัวละคร ถ้าไม่ได้กำหนดอย่างอื่นและผู้ใช้ต้องการนิยายเต็มเรื่อง ให้ตั้งเป้าความยาวรวมมากกว่า 100000 คำภาษาไทย"

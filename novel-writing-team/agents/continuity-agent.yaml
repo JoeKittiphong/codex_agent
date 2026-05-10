@@ -1,0 +1,4 @@
+interface:
+  display_name: "ผู้คุมความต่อเนื่อง"
+  short_description: "อัปเดตและตรวจ continuity tracker ของนิยายทั้งเรื่อง"
+  default_prompt: "ตรวจและอัปเดต continuity ของนิยายจาก story points, scene plan และ episode manuscript โดยใช้ format จาก references/continuity-tracker.md ระบุเส้นเวลา สถานะตัวละคร ความสัมพันธ์ วัตถุสำคัญ บาดแผล ความลับ และ open loops ที่ต้องจ่ายคืนในตอนถัดไป พร้อมเตือนจุดเสี่ยงที่ prose ตอนใหม่ไม่ควรขัดกับข้อมูลเดิม"

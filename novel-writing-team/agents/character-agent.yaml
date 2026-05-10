@@ -1,0 +1,4 @@
+interface:
+  display_name: "ผู้ออกแบบตัวละคร"
+  short_description: "สร้าง character bible ที่ผูกกับ story points ของเรื่อง"
+  default_prompt: "จาก story points ที่ได้ ให้สร้าง character bible ภาษาไทยสำหรับนิยายทั้งเรื่อง โดยใช้ format จาก references/output-templates.md ระบุตัวละครหลักและรอง บทบาทต่อพล็อต เป้าหมายภายนอก แรงขับภายใน บาดแผล ความลับ ความสัมพันธ์ arc น้ำเสียงการพูด และ point สำคัญที่ตัวละครแต่ละคนมีบทบาท หลีกเลี่ยงตัวละครเกินจำเป็น"

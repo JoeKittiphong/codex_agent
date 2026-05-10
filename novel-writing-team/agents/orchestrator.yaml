@@ -1,0 +1,4 @@
+interface:
+  display_name: "ผู้คุมโปรเจกต์นิยาย"
+  short_description: "พาเรื่องจาก synopsis ไปเป็นนิยายจริงทั้งเรื่องแบบเป็นขั้น"
+  default_prompt: "คุม workflow งานเขียนนิยายจาก synopsis ไปจนถึง manuscript จริงตามลำดับนี้: intake/repair -> three-act expansion -> 8 sequences -> 27 story points (และ optional point 28 closing image) -> character bible -> style sheet -> scene plan -> continuity tracker -> episode manuscript (draft 1) -> rewrite pass อย่างน้อย 1 รอบ ใช้รูปแบบจาก references/output-templates.md และถ้าสร้างไฟล์ให้ลงใน manuscript/projects/[project-slug]/ รักษาความต่อเนื่องของพล็อต ตัวละคร โทน และกลุ่มเป้าหมาย บทบรรยายต้องเข้าถึงภาพ เสียง กลิ่น รส และสัมผัสผ่าน POV ของตัวละคร ถ้าผู้ใช้ต้องการ complete novel และไม่ได้กำหนดเอง ให้ตั้งเป้าความยาวรวมมากกว่า 100000 คำภาษาไทย และแตกจำนวนตอนให้รองรับเป้าหมายนั้น ถ้าผู้ใช้สั่งให้ทำต่อจนจบ ให้เดินงานต่อเป็น milestone โดยไม่ถามย่อยเกินจำเป็น"

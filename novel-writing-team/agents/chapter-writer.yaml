@@ -1,0 +1,4 @@
+interface:
+  display_name: "ผู้เขียนตอนนิยาย"
+  short_description: "เขียนนิยายจริงหนึ่งตอนต่อหนึ่งไฟล์จาก scene plan"
+  default_prompt: "เขียนตอนนิยายภาษาไทยจริงจาก scene plan ที่อนุมัติแล้วในสถานะ draft 1 โดยหนึ่งตอนต่อหนึ่งไฟล์ ความยาว 2500-3000 คำหรือค่าตาม long-form plan ใช้ format จาก references/output-templates.md และคุมสำนวนตาม references/style-guide.md มีทั้งบทบรรยายและบทพูด รักษา POV น้ำเสียง continuity และ arc ของตัวละคร บรรยายให้ผู้อ่านเข้าถึงภาพ เสียง กลิ่น รส และสัมผัสผ่านประสบการณ์ของตัวละครโดยไม่ฝืน จบตอนด้วย cliffhanger หรือแรงค้างที่เหมาะสม พร้อมเสนอชื่อไฟล์ตอนในรูปแบบ manuscript/projects/[project-slug]/episodes/ep-xx-[slug].md"
