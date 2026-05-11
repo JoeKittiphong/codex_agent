@@ -1,6 +1,6 @@
 ---
 name: novel-writing-team
-description: รับเรื่องย่อหรือไอเดียนิยายจากผู้ใช้ แล้วพัฒนาเป็นนิยายไทยฉบับสมบูรณ์ด้วย workflow: synopsis -> 3 acts -> 8 sequences -> 27 story points (+ optional point 28 สำหรับ closing image) -> character bible -> scene plan -> episode prose
+description: รับเรื่องย่อหรือไอเดียนิยายจากผู้ใช้ แล้วพัฒนาเป็นนิยายไทยฉบับสมบูรณ์ด้วย workflow: synopsis -> 3 acts -> 8 sequences -> 27 story points (+ optional point 28 สำหรับ closing image) -> character bible -> scene plan -> episode prose -> rewrite -> final audit -> editorial polish
 ---
 
 # ทีมเขียนนิยาย
@@ -19,8 +19,10 @@ description: รับเรื่องย่อหรือไอเดีย�
 7. `Continuity Tracker`
 8. `Episode Manuscript`
 9. `Rewrite Pass`
-10. `Editorial Review` (optional)
-11. `World Bible` (optional)
+10. `Final Continuity + Word-Count Audit`
+11. `Editorial Polish Pass`
+12. `Editorial Review` (optional)
+13. `World Bible` (optional)
 
 ถ้าผู้ใช้ยังไม่มี synopsis ให้ย้อนกลับไปทำ `Premise` และ `Synopsis` ก่อน แล้วจึงเข้าสู่ workflow หลัก
 
@@ -40,6 +42,8 @@ description: รับเรื่องย่อหรือไอเดีย�
 - ใช้ `references/longform.md` เพื่อแปลง total word target ไปเป็นจำนวนตอนและกลยุทธ์การขยายเรื่อง
 - ถ้าผู้ใช้ให้มาแค่ไอเดียสั้น ให้สร้าง premise และ synopsis ก่อน
 - ถ้า synopsis ยังมีรูรั่วด้านเหตุผล แรงจูงใจ หรือเดิมพัน ให้ซ่อมก่อนค่อยแตกโครง
+- ถ้าผู้ใช้ส่งเรื่องย่อแล้วสั่งให้เริ่มทำ ให้ถือว่าอนุญาตให้รันทั้ง workflow จนถึง polished draft โดยอัตโนมัติ
+- ถ้าข้อมูลย่อยบางช่องยังไม่ครบ แต่สามารถอนุมานอย่างสมเหตุสมผลได้ ให้ล็อก assumption เองแล้วเดินต่อ ไม่ต้องหยุดรอถามทุกจุด
 
 ### ขั้น 1: Three-Act Expansion
 - ขยาย synopsis ให้เป็นโครง `Act 1 / Act 2 / Act 3`
@@ -183,6 +187,24 @@ description: รับเรื่องย่อหรือไอเดีย�
   - เดินต่อจนกว่าจะครบทั้งเรื่อง หรือจนผู้ใช้สั่งหยุด/เปลี่ยนแผน
 - เมื่อรีไรต์แล้วให้อัปเดต `rewrite-log.md` ของโปรเจกต์
 
+### ขั้น 10: Final Continuity + Word-Count Audit
+- หลัง rewrite ครบทั้งเรื่อง ให้ตรวจ continuity ทั้งเรื่องอีกครั้ง
+- ใช้ `references/final-audit.md`
+- ต้องตรวจ:
+  - timeline และ open loops
+  - arc ตัวละครและความสัมพันธ์
+  - กฎโลก กฎเวท บาดแผล วัตถุสำคัญ และราคาของเหตุการณ์
+  - จำนวนคำรายตอนและรวมทั้งเรื่อง เทียบกับ total word target
+- บันทึกผลใน `final-audit.md`
+- ถ้าผู้ใช้สั่ง `ทำต่อจนจบ` หรือมีเจตนาปิดงานทั้ง workflow ให้รันขั้นนี้ต่ออัตโนมัติหลัง rewrite ครบ
+
+### ขั้น 11: Editorial Polish Pass
+- ใช้ `references/editorial-polish.md`
+- เป้าหมายคือยกระดับ `draft 2` ไปเป็น `polished draft`
+- เกลาในระดับคำ ประโยค ย่อหน้า จังหวะตอน และความสม่ำเสมอทั้งเรื่อง
+- ทำงานเป็น `continuous editorial polish batches` ได้เมื่อผู้ใช้ต้องการให้ทำต่อจนจบ
+- หลังจบแต่ละ batch ให้อัปเดต `polish-log.md`, `README.md` ของโปรเจกต์ และ `manuscript/projects/index.md`
+
 ## มาตรฐานความยาว
 
 - 1 ตอน: โดยทั่วไป `2500-3000 คำภาษาไทย` เว้นแต่ long-form plan จะกำหนดต่างออกไป
@@ -219,9 +241,15 @@ description: รับเรื่องย่อหรือไอเดีย�
 - prose ต้องมีทั้งบทบรรยายและบทพูด ไม่ใช่เล่าแบบสรุปแห้งๆ
 - เมื่อเขียน prose ให้บรรยายผ่านประสบการณ์ของตัวละคร โดยใช้ภาพ เสียง กลิ่น รส และสัมผัสอย่างเป็นธรรมชาติ
 - รักษาแนว โทน กลุ่มเป้าหมาย และข้อห้ามของผู้ใช้ตลอดทั้ง workflow
-- ถ้าผู้ใช้สั่ง “ทำต่อจนจบ” ให้เดิน workflow ต่อเนื่องได้โดยไม่ถามซ้ำทุกขั้น เว้นแต่มีช่องโหว่สำคัญจริงๆ
+- ค่าเริ่มต้นของระบบคือ `run-through mode` ไม่ใช่ approval mode
+- ถ้าผู้ใช้สั่ง “ทำต่อจนจบ” หรือส่งเรื่องย่อพร้อมเจตนาให้เริ่มทำจริง ให้เดิน workflow ต่อเนื่องได้โดยไม่ถามซ้ำทุกขั้น เว้นแต่มีช่องโหว่สำคัญจริงๆ
+- หลัง rewrite ครบทั้งเรื่อง ให้ตีความคำสั่งนี้ว่ารวมสิทธิให้เดินต่อ `final audit -> editorial polish` อัตโนมัติด้วย เว้นแต่พบปัญหา continuity ระดับโครงสร้าง
 
 ## สัญญาการส่งงาน
+
+โหมดทำงานปริยาย:
+- `Run-through mode` เป็นค่าเริ่มต้น
+- ใช้ `Approval mode` เฉพาะเมื่อผู้ใช้ระบุชัดว่าต้องการอนุมัติทีละขั้น
 
 ลำดับการส่งงานที่แนะนำ:
 1. Synopsis intake หรือ premise/synopsis repair
@@ -234,6 +262,8 @@ description: รับเรื่องย่อหรือไอเดีย�
 8. Continuity tracker
 9. Episode files ทีละตอนหรือเป็น batch (draft 1)
 10. Rewrite pass + rewrite log
+11. Final continuity + word-count audit
+12. Editorial polish pass + polish log
 
 ## รูปแบบไฟล์ที่แนะนำเมื่อเขียนนิยายจริง
 
@@ -254,8 +284,10 @@ description: รับเรื่องย่อหรือไอเดีย�
 - `manuscript/projects/[project-slug]/scenes.md`
 - `manuscript/projects/[project-slug]/continuity.md`
 - `manuscript/projects/[project-slug]/rewrite-log.md`
+- `manuscript/projects/[project-slug]/final-audit.md`
 - `manuscript/projects/[project-slug]/world.md`
 - `manuscript/projects/[project-slug]/editorial-report.md`
+- `manuscript/projects/[project-slug]/polish-log.md`
 - `manuscript/projects/[project-slug]/episodes/ep-01-[slug].md`
 - `manuscript/projects/[project-slug]/episodes/ep-02-[slug].md`
 
@@ -270,6 +302,8 @@ description: รับเรื่องย่อหรือไอเดีย�
 - ดู `references/style-guide.md`
 - ดู `references/continuity-tracker.md`
 - ดู `references/rewrite-pass.md`
+- ดู `references/final-audit.md`
+- ดู `references/editorial-polish.md`
 - ดู `references/longform.md`
 - ดู `references/editor-checklist.md`
 - ดู `references/worldbuilding.md`

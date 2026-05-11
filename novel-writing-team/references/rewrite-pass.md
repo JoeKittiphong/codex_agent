@@ -39,7 +39,9 @@
 2. ทำ editorial pass เพื่อหาจุดอ่อนหลัก
 3. ทำ rewrite pass อย่างน้อย 1 รอบ
 4. อัปเดต continuity ถ้ามีการปรับรายละเอียดเล็กน้อย
-5. ล็อกเป็น draft 2 หรือ polished draft
+5. ล็อกเป็น draft 2
+6. ทำ final continuity + word-count audit
+7. ทำ editorial polish pass แล้วจึงล็อกเป็น polished draft
 
 ## Continuous Rewrite Batches
 - ถ้าผู้ใช้สั่งรีไรต์ทั้งเรื่อง ให้ทำงานเป็น batch ต่อเนื่อง เช่น ตอน 1-4, 5-8, 9-12
@@ -47,6 +49,8 @@
 - หลังจบแต่ละ batch ให้บันทึกใน `rewrite-log.md` ว่ารีไรต์ถึงตอนใดแล้ว
 - ให้อัปเดต `README.md` ของโปรเจกต์และ `manuscript/projects/index.md` ทุกครั้ง
 - ทำต่อเนื่องจนกว่าจะครบทั้งเรื่อง เว้นแต่ผู้ใช้สั่งหยุดหรือเปลี่ยนแผน
+- เมื่อรีไรต์ครบทั้งเรื่องแล้ว ให้ส่งต่องานไป `references/final-audit.md` โดยอัตโนมัติ ถ้าผู้ใช้มีเจตนาให้ปิด workflow จนจบ
+- ถ้า final audit ผ่านหรือมีเพียง issue ระดับย่อย ให้ส่งต่อเข้า `references/editorial-polish.md` โดยไม่ต้องถามซ้ำ
 
 ## รูปแบบผลลัพธ์ที่แนะนำ
 

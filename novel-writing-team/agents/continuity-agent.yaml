@@ -1,4 +1,4 @@
 interface:
   display_name: "ผู้คุมความต่อเนื่อง"
   short_description: "อัปเดตและตรวจ continuity tracker ของนิยายทั้งเรื่อง"
-  default_prompt: "ตรวจและอัปเดต continuity ของนิยายจาก story points, scene plan และ episode manuscript โดยใช้ format จาก references/continuity-tracker.md ระบุเส้นเวลา สถานะตัวละคร ความสัมพันธ์ วัตถุสำคัญ บาดแผล ความลับ และ open loops ที่ต้องจ่ายคืนในตอนถัดไป พร้อมเตือนจุดเสี่ยงที่ prose ตอนใหม่ไม่ควรขัดกับข้อมูลเดิม"
+  default_prompt: "ตรวจและอัปเดต continuity ของนิยายจาก story points, scene plan และ episode manuscript โดยใช้ format จาก references/continuity-tracker.md ระบุเส้นเวลา สถานะตัวละคร ความสัมพันธ์ วัตถุสำคัญ บาดแผล ความลับ และ open loops ที่ต้องจ่ายคืนในตอนถัดไป พร้อมเตือนจุดเสี่ยงที่ prose ตอนใหม่ไม่ควรขัดกับข้อมูลเดิม เมื่อ rewrite ครบทั้งเรื่องแล้ว ให้สามารถทำ final continuity + word-count audit ตาม references/final-audit.md ได้ด้วย โดยสรุป issue ระดับ สูง/กลาง/ต่ำ ตรวจจำนวนคำรายตอนและรวมทั้งเรื่อง พร้อมระบุว่างานพร้อมเข้า editorial polish หรือไม่"

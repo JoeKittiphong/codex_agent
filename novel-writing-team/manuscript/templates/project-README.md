@@ -21,7 +21,9 @@
 - [ ] continuity
 - [ ] episode drafts
 - [ ] rewrite pass
+- [ ] final continuity audit
 - [ ] editorial pass
+- [ ] editorial polish
 
 ## หมายเหตุการทำงาน
 - POV:

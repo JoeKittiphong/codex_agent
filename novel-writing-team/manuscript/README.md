@@ -16,7 +16,9 @@
 3. กรอกข้อมูลแต่ละไฟล์ของเรื่องนั้น รวม total word target ของทั้งเรื่อง
 4. เขียนตอนจริงไว้ใน `manuscript/projects/[project-slug]/episodes/` เป็น draft 1
 5. รีไรต์อย่างน้อย 1 รอบและบันทึกใน `rewrite-log.md`
-6. อัปเดต `continuity.md` และ `editorial-report.md` แยกตามแต่ละเรื่อง
+6. ทำ `final-audit.md` เพื่อตรวจ continuity ทั้งเรื่องและจำนวนคำรวม
+7. ทำ `polish-log.md` และเกลางานเป็น polished draft
+8. อัปเดต `continuity.md` และ `editorial-report.md` แยกตามแต่ละเรื่อง
 
 ## โครงของหนึ่งโปรเจกต์นิยาย
 
@@ -33,7 +35,9 @@
 - `episode-map.md` แผนจับฉากลงตอน
 - `continuity.md` continuity tracker
 - `rewrite-log.md` บันทึกการรีไรต์หลัง draft แรก
+- `final-audit.md` รายงานตรวจ continuity ทั้งเรื่องและจำนวนคำรวม
 - `editorial-report.md` รายงานตรวจงาน
+- `polish-log.md` บันทึกการเกลารอบสุดท้าย
 - `episodes/` ไฟล์นิยายจริง ตอนละหนึ่งไฟล์
 
 ## โฟลเดอร์ตัวอย่าง
@@ -55,4 +59,6 @@
 10. อัปเดต `continuity.md` ทุกครั้งหลังเขียนตอน
 11. เขียนนิยายจริงใน `episodes/` เป็น draft 1
 12. รีไรต์อย่างน้อย 1 รอบและบันทึกใน `rewrite-log.md`
-13. ตรวจแก้ด้วย `editorial-report.md` ตามต้องการ
+13. ตรวจ continuity ทั้งเรื่องและจำนวนคำรวมใน `final-audit.md`
+14. เกลางานรอบสุดท้ายและบันทึกใน `polish-log.md`
+15. ตรวจแก้ด้วย `editorial-report.md` ตามต้องการ

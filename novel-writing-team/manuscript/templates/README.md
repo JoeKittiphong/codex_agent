@@ -27,5 +27,7 @@
 - `episode-map.md`
 - `continuity.md`
 - `rewrite-log.md`
+- `final-audit.md`
 - `editorial-report.md`
+- `polish-log.md`
 - `episodes/ep-00-template.md`

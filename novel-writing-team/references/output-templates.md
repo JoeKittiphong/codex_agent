@@ -280,3 +280,64 @@ World Bible
 - ข้อจำกัดที่ส่งผลต่อพล็อต:
 - จุดในเรื่องที่จะใช้ข้อมูลโลกเหล่านี้:
 ```
+
+## 13. Final Audit Report
+
+```text
+Final Audit Report
+- ขอบเขตที่ตรวจ:
+- สถานะต้นฉบับที่ตรวจ: draft 2 / rewrite pass complete
+- วิธีนับจำนวนคำ:
+- total word target:
+- จำนวนคำรวมที่ตรวจได้:
+- สรุปภาพรวม:
+
+## ผลตรวจ continuity
+- จุดแข็ง:
+  1.
+  2.
+- จุดเสี่ยงที่ต้องแก้:
+  1. [ระดับ: สูง/กลาง/ต่ำ]
+  2.
+- open loops ที่ยังค้าง:
+  1.
+- กฎโลก/กฎเวทที่ต้องยืนยัน:
+  1.
+
+## Word Count by Episode
+- ep-01:
+- ep-02:
+
+## คำแนะนำถัดไป
+- พร้อมเข้า editorial polish หรือไม่:
+- ตอนที่ควรขยาย:
+- ตอนที่ควรตัด/กระชับ:
+- สถานะหลัง audit: pass / conditional pass / hold
+```
+
+## 14. Editorial Polish Log
+
+```text
+Editorial Polish Log
+- ขอบเขตที่เกลา:
+- อิงจาก audit:
+- เป้าหมายของ batch นี้:
+
+## สิ่งที่เกลาหลัก
+1.
+2.
+3.
+
+## จุดที่เก็บ continuity เพิ่ม
+1.
+2.
+
+## ตอนที่อัปเดตเป็น polished draft
+- ep-01
+- ep-02
+
+## สถานะหลัง polish
+- progress:
+- next batch:
+- overall status: in progress / complete
+```
