@@ -182,6 +182,7 @@ Metadata
 - ช่วงเวลา:
 - ครอบคลุมฉาก:
 - ครอบคลุม points:
+- หมุดเปิดโลกต้นตอน: [จำเป็นมากสำหรับ ep-01; ระบุว่าย่อหน้าแรกจะทำให้คนอ่านเห็นโลกนี้อย่างไร]
 - ความยาวเป้าหมาย: 2500-3000 คำ หรือค่าตาม long-form plan
 - สถานะต้นฉบับ: draft 1 / draft 2 / polished draft
 - Cliffhanger ท้ายตอน:
@@ -193,8 +194,19 @@ Metadata
 ไฟล์: output/[project-slug]/ep-01-[slug].md
 ตอนที่ 1: [ชื่อตอน]
 
-[เนื้อหานิยายภาษาไทยจริง มีทั้งบทบรรยายและบทพูดที่พร้อมอ่าน ไม่มี metadata หรือหัวข้อกำกับ]
+[เนื้อหานิยายภาษาไทยจริง มีทั้งบทบรรยายและบทพูดที่พร้อมอ่าน ไม่มี metadata หรือหัวข้อกำกับ; สำหรับ ep-01 ย่อหน้าแรกต้องเปิด setting โลกให้คนอ่านเห็นทันทีว่ากำลังเข้าสู่โลกนิยายแบบไหน]
 ```
+
+## 7C. Output Sync Convention
+
+- ระหว่างช่วง draft / rewrite / polish ให้ถือไฟล์ใน `manuscript/projects/[project-slug]/episodes/` เป็น working source โดยมีทั้ง Metadata + `Prose:` อยู่ในไฟล์เดียว
+- ทุกตอนต้องผ่านลูป `draft -> rewrite -> polish -> check word count` ก่อนเริ่มตอนถัดไป
+- สำหรับ `ep-01` ให้ตรวจเพิ่มว่าย่อหน้าแรกเปิดโลกของเรื่องชัด ว่าผู้คนอยู่กันอย่างไรหรือมีกฎ/สภาพแวดล้อมอะไรคุมชีวิตคร่าวๆ
+- ใช้ `node tools/check-episode-wordcount.mjs [project-slug] --episode ep-XX` เพื่อตรวจว่าจำนวนคำของตอนนั้นอยู่ในช่วงเป้าหมายจาก metadata หรือไม่
+- ถ้ายังไม่ถึงหรือเกินช่วง ให้กลับไปขยาย/กระชับ prose ตอนเดิม แล้ว rewrite + polish + ตรวจซ้ำจนกว่าจะผ่าน
+- หลังจบแต่ละ batch ให้รัน `node tools/sync-output.mjs [project-slug]` เพื่อ sync prose ไปที่ `output/[project-slug]/`
+- เมื่อโปรเจกต์ถึงสถานะ `polished draft complete` และไม่ต้องแก้ prose ใน working source แล้ว ค่อยรัน `node tools/sync-output.mjs [project-slug] --finalize`
+- ถ้าต้องการทำทั้ง repo พร้อมกัน ใช้ `node tools/sync-output.mjs --all` และถ้าต้องการ finalize ทั้งหมด ใช้ `node tools/sync-output.mjs --all --finalize`
 
 ## 8. Rewrite Log
 

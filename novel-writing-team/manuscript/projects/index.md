@@ -10,3 +10,4 @@
 | flame-of-forgetting | เพลิงลบลืม | polished draft complete | ep-36 | รันจบทั้ง workflow แบบอัตโนมัติจาก synopsis.text |
 | flame-of-forgetting | เพลิงลบลืม | ตั้งต้นใหม่ | - | รอกรอกโครงเรื่อง |
 | test-project | Test Project | ตั้งต้นใหม่ | - | รอกรอกโครงเรื่อง |
+| praan-thamil | พรานทมิฬ | polished draft complete | ep-36 | ครบ workflow ถึง rewrite, audit และ polish แล้ว |

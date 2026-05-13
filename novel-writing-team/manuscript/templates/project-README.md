@@ -32,3 +32,5 @@
 - เป้าหมายของ draft ล่าสุด:
 - batch ล่าสุดที่ทำถึง:
 - งาน batch ถัดไป:
+- คำสั่งประจำหลังจบแต่ละตอน: `node tools/check-episode-wordcount.mjs [project-slug] --episode ep-XX` แล้วถ้าอยู่ในช่วงเป้าหมายค่อยไปตอนถัดไป
+- คำสั่ง sync output หลังจบแต่ละ batch: `node tools/sync-output.mjs [project-slug]`

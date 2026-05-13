@@ -142,6 +142,7 @@
 - ความยาวตอนละ 2500-3000 คำภาษาไทย หรือปรับตาม long-form plan
 - มีทั้งบทบรรยายและบทพูด
 - บทพูดต้องเป็น direct dialogue จริง ไม่ใช่เพียงประโยคอ้างหรือสรุปว่าคนพูดอะไร
+- สำหรับ `ep-01` ย่อหน้าแรกต้องทำหน้าที่เปิดโลกให้ชัด ว่าคนอ่านกำลังเข้าสู่โลกแบบไหน ผ่านภาพสถานที่ บรรยากาศ วิถีชีวิต หรือกฎการอยู่รอดของผู้คน โดยยังต้องเป็น prose จริง ไม่ใช่ lore dump หรือสารานุกรมโลก
 - โดยทั่วไปแต่ละตอนควรมีอย่างน้อย 2-4 ช่วงบทสนทนาที่ช่วยขับพล็อต ตัวละคร หรือแรงกดดันของฉาก เว้นแต่เป็นตอนที่ตั้งใจโดดเดี่ยวจริง
 - จบด้วยแรงค้างหรือจุดพักที่เหมาะสม
 - ถ้าผู้ใช้สั่งครั้งเดียวจบหรือมีเจตนาให้ทำทั้งเรื่อง ให้เข้าสู่โหมด `continuous draft batches`
@@ -149,9 +150,24 @@
   - หลังจบแต่ละ batch ให้อัปเดต `continuity.md`, `README.md` ของโปรเจกต์ และ `manuscript/projects/index.md`
   - เดินต่อจนกว่าจะครบ draft 1 ทั้งเรื่อง หรือจนพบปัญหาโครงสร้างสำคัญที่ต้องถามกลับ
 
-รูปแบบไฟล์ที่ได้จากขั้นนี้จะแยกเป็น 2 ส่วนคือ:
-- ไฟล์ Metadata: `manuscript/projects/[project-slug]/episodes/ep-01-[slug].md`
+รูปแบบไฟล์ที่ได้จากขั้นนี้มี 2 ชั้น:
+- working source: `manuscript/projects/[project-slug]/episodes/ep-01-[slug].md` โดยช่วง draft / rewrite / polish ให้เก็บทั้ง Metadata + `Prose:` ไว้ในไฟล์เดียวเพื่อให้แก้ง่าย
 - ไฟล์เนื้อหาพร้อมอ่าน (Prose): `output/[project-slug]/ep-01-[slug].md`
+
+หลังจบแต่ละตอน ให้บังคับใช้ลูป `draft -> rewrite -> polish -> check word count` ก่อนเริ่มตอนถัดไป
+
+ใช้ `node tools/check-episode-wordcount.mjs [project-slug] --episode ep-XX` เพื่อตรวจว่าตอนนั้นอยู่ในช่วงเป้าหมายจาก metadata หรือไม่
+
+ถ้าจำนวนคำยังไม่อยู่ในช่วง ให้กลับไปขยาย/กระชับ prose ของตอนเดิม แล้ว rewrite + polish + ตรวจซ้ำจนกว่าจะผ่าน
+
+สำหรับ `ep-01` ให้ทำ `AI world-opening review` หลัง draft/rewrite/polish ของตอนนั้นด้วย โดยให้ agent ตัดสิน PASS/FAIL จากการอ่านย่อหน้าแรกจริงในฐานะนักอ่านนิยาย ไม่ใช่เช็กแค่คีย์เวิร์ด
+- PASS เมื่อย่อหน้าแรกทำให้เห็นโลกของเรื่องชัด โดยอย่างน้อยต้องมี 3 แกน: ภูมิประเทศ/ผังพื้นที่ของโลก, การปกครองหรือโครงสร้างอำนาจ, และการใช้ชีวิตปกติของผู้คน พร้อมกฎ/ระบบ/สภาพแวดล้อมของโลกที่โผล่มาอย่างเป็นธรรมชาติ
+- FAIL เมื่อย่อหน้าแรกยังลอย ยังไม่บอกว่าผู้อ่านอยู่ในโลกแบบไหน หรือกลายเป็น lore dump แทนฉากนิยาย
+- `node tools/check-world-opening.mjs [project-slug]` ใช้ได้เป็นเพียง supporting heuristic เพื่อช่วยเตือน ไม่ใช่คำตัดสินสุดท้าย
+
+หลังจบแต่ละ batch ให้รัน `node tools/sync-output.mjs [project-slug]` เพื่อ sync prose จาก working source ไปที่ `output/`
+
+เมื่อโปรเจกต์ถึงสถานะ `polished draft complete` และไม่ต้องแก้ prose ใน working source แล้ว จึงค่อยรัน `node tools/sync-output.mjs [project-slug] --finalize` เพื่อ strip prose ออกจาก `manuscript/` ให้เหลือ metadata-only
 
 ## ขั้นที่ 9: Rewrite Pass
 
@@ -208,7 +224,9 @@
 - prose ต้องอ่านเป็นนิยายจริง ไม่ใช่ bullet summary
 - การบรรยายควรทำให้ผู้อ่านเห็นภาพ ได้ยินเสียง ได้กลิ่น รู้รส และรับสัมผัสผ่าน POV ของตัวละครอย่างเป็นธรรมชาติ
 - เมื่อมีการเปิดตัวครั้งแรกของคน สถานที่ หรือวัตถุสำคัญ ต้องเลือกภาพจำที่ชัดและเฉพาะ ไม่ใช่บรรยายลอยหรือบอกข้อมูลแบบแฟ้มประวัติ
+- ตอนที่ 1 ย่อหน้าแรกต้องทำให้ผู้อ่านเห็น setting โลกทันที ว่าโลกนี้อยู่ยากหรืออยู่แบบไหน ผู้คนใช้ชีวิตกับกฎหรือสภาพแวดล้อมอะไรอย่างคร่าวๆ โดยฝังในภาพเหตุการณ์ ไม่ใช่อธิบายแยกเป็นบทความ
 - workflow ปกติควรมีอย่างน้อย 1 รอบของ rewrite หลัง draft แรกเสมอ
+- ทุกตอนต้องถูกล็อกให้ผ่านเป้าหมายจำนวนคำรายตอนก่อนขยับไปตอนถัดไป
 - หลัง rewrite ครบทั้งเรื่อง ควรมี final continuity + word-count audit ก่อนปิดงาน
 - จากนั้นควรมี editorial polish pass เพื่อยกระดับเป็น polished draft
 - ถ้าผู้ใช้สั่งรีไรต์ทั้งเรื่อง ให้ตีความเป็นคำสั่งให้เดินต่อแบบ continuous rewrite batches จนจบเช่นกัน
@@ -228,10 +246,13 @@
 เมื่อจบแต่ละขั้นหลัก (draft 1 / rewrite / final audit / polish) ต้องตรวจผลลัพธ์จริงก่อนเดินต่อ:
 1. prose ทุกตอนเป็นเหตุการณ์จริง ไม่ใช่ editorial commentary หรือ template ที่ซ้ำข้ามตอน
 2. ทุกตอนมี direct dialogue อย่างน้อย 3 ช่วง
-3. จำนวนคำรายตอนอยู่ในช่วงเป้าหมาย ±20%
-4. คุณภาพไม่ตกลงอย่างเห็นได้ชัดระหว่าง batch แรกกับ batch สุดท้าย
-5. ถ้าพบว่าไม่ผ่าน ให้ย้อนกลับไปแก้ขั้นนั้นก่อนเดินต่อ สูงสุด 2 รอบ
-6. บันทึกผลการตรวจใน quality gate log ของ README ทุกครั้ง
+3. สำหรับ `ep-01` ย่อหน้าแรกต้องเปิด setting โลกชัดพอให้รู้ว่าผู้อ่านกำลังเข้าสู่โลกนิยายแบบไหน โดยต้องเห็นภูมิประเทศ/ผังพื้นที่ การปกครองหรือโครงสร้างอำนาจ และการใช้ชีวิตปกติของผู้คนคร่าวๆ
+4. `AI world-opening review` ต้อง PASS สำหรับ `ep-01`; ถ้า FAIL ต้องกลับไปแก้ย่อหน้าเปิดก่อนเดินต่อ
+5. `node tools/check-world-opening.mjs [project-slug]` ใช้เป็น supporting heuristic ได้ แต่ไม่แทนการ review โดย agent
+6. จำนวนคำรายตอนอยู่ในช่วงเป้าหมายของ metadata; ถ้ายังไม่ผ่านต้องขยาย/กระชับแล้ว rewrite + polish ซ้ำจนผ่านก่อนเริ่มตอนถัดไป
+7. คุณภาพไม่ตกลงอย่างเห็นได้ชัดระหว่าง batch แรกกับ batch สุดท้าย
+8. ถ้าพบว่าไม่ผ่าน ให้ย้อนกลับไปแก้ขั้นนั้นก่อนเดินต่อ สูงสุด 2 รอบต่อการแก้ย่อยหนึ่งครั้ง แต่ลูปจำนวนคำของตอนยังต้องทำต่อจนกว่าจะเข้าเป้า
+9. บันทึกผลการตรวจใน quality gate log ของ README ทุกครั้ง
 
 ## Internal Recap สำหรับนิยายยาว
 
@@ -254,10 +275,11 @@
 7. scene plan + episode map
 8. continuity tracker
 9. episode prose (draft 1)
-10. draft quality gate (ตรวจ prose authenticity, word count, dialogue density)
-11. rewrite pass
-12. final continuity + word-count audit
-13. editorial polish pass
+10. per-episode lock loop: rewrite -> polish -> check word count -> expand if needed -> rewrite/polish/check ซ้ำจนผ่าน
+11. draft quality gate (ตรวจ prose authenticity, word count, dialogue density)
+12. rewrite pass
+13. final continuity + word-count audit
+14. editorial polish pass
 
 โหมดการทำงานมี 2 แบบ:
 - `Run-through mode` (ค่าเริ่มต้น): ถ้าผู้ใช้ส่งเรื่องย่อและสั่งให้เริ่มทำ ให้เดินต่อจนจบทั้ง workflow แล้วค่อยสรุปเป็น milestone
@@ -376,17 +398,26 @@ Scene S01
 - ความยาวเป้าหมาย:
 ```
 
-### Episode Manuscript
+### Episode Manuscript (working source)
 
 ```text
 ไฟล์: manuscript/projects/[project-slug]/episodes/ep-01-[slug].md
 ตอนที่ 1: [ชื่อตอน]
+
+Metadata
+- POV:
+- ช่วงเวลา:
 - ครอบคลุมฉาก:
+- ครอบคลุม points:
 - ความยาวเป้าหมาย: 2500-3000 คำ หรือค่าตาม long-form plan
+- สถานะต้นฉบับ: draft 1 / draft 2 / polished draft
 - Cliffhanger ท้ายตอน:
 
+Prose:
 [prose ภาษาไทยจริง]
 ```
+
+หลังเขียนหรือรีไรต์จบ batch ให้ export ไฟล์อ่านล้วนด้วย `node tools/sync-output.mjs [project-slug]`
 
 ### Rewrite Log
 
