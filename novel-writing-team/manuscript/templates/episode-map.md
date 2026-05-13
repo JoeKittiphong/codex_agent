@@ -4,6 +4,7 @@
 - ไฟล์: manuscript/projects/[project-slug]/episodes/ep-01-[slug].md
 - ครอบคลุมฉาก:
 - ครอบคลุม points:
+- batch การเขียน draft 1:
 - เป้าหมายของตอน:
 - จุดเปิดตอน:
 - จุดเร่งกลางตอน:

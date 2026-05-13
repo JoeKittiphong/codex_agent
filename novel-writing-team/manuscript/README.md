@@ -14,7 +14,7 @@
 1. สร้างโฟลเดอร์ใหม่ที่ `manuscript/projects/[project-slug]/`
 2. คัดลอกไฟล์จาก `manuscript/templates/` ลงไป หรือใช้คำสั่ง `node tools/new-project.mjs [project-slug] [title]`
 3. กรอกข้อมูลแต่ละไฟล์ของเรื่องนั้น รวม total word target ของทั้งเรื่อง
-4. เขียนตอนจริงไว้ใน `manuscript/projects/[project-slug]/episodes/` เป็น draft 1
+4. เขียนตอนจริงไว้ใน `manuscript/projects/[project-slug]/episodes/` เป็น draft 1 โดยทำต่อเนื่องเป็น batch ได้เมื่อผู้ใช้สั่งครั้งเดียวจบ
 5. รีไรต์อย่างน้อย 1 รอบและบันทึกใน `rewrite-log.md`
 6. ทำ `final-audit.md` เพื่อตรวจ continuity ทั้งเรื่องและจำนวนคำรวม
 7. ทำ `polish-log.md` และเกลางานเป็น polished draft
@@ -56,9 +56,10 @@
 7. สร้างตัวละครใน `characters.md`
 8. วางฉากใน `scenes.md`
 9. จัดลงตอนใน `episode-map.md`
-10. อัปเดต `continuity.md` ทุกครั้งหลังเขียนตอน
+10. อัปเดต `continuity.md` ทุกครั้งหลังเขียนตอน หรืออย่างช้าที่สุดหลังจบแต่ละ batch
 11. เขียนนิยายจริงใน `episodes/` เป็น draft 1
-12. รีไรต์อย่างน้อย 1 รอบและบันทึกใน `rewrite-log.md`
-13. ตรวจ continuity ทั้งเรื่องและจำนวนคำรวมใน `final-audit.md`
-14. เกลางานรอบสุดท้ายและบันทึกใน `polish-log.md`
-15. ตรวจแก้ด้วย `editorial-report.md` ตามต้องการ
+12. ถ้าผู้ใช้สั่งครั้งเดียวจบ ให้เดิน episode -> rewrite -> audit -> polish ต่อเนื่องเป็น batch โดยไม่ต้องถามซ้ำ เว้นแต่มีปัญหาโครงสร้าง
+13. รีไรต์อย่างน้อย 1 รอบและบันทึกใน `rewrite-log.md`
+14. ตรวจ continuity ทั้งเรื่องและจำนวนคำรวมใน `final-audit.md`
+15. เกลางานรอบสุดท้ายและบันทึกใน `polish-log.md`
+16. ตรวจแก้ด้วย `editorial-report.md` ตามต้องการ

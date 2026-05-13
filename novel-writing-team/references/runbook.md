@@ -5,7 +5,8 @@
 ## โหมดเริ่มงานอัตโนมัติ
 - ค่าเริ่มต้นของระบบคือ `run-through mode`
 - ถ้าผู้ใช้ส่งเรื่องย่อครั้งเดียวแล้วสั่งให้เริ่มทำ ให้เดินตั้งแต่ intake -> draft 1 -> rewrite -> final audit -> editorial polish ต่อเนื่องโดยไม่ต้องถามซ้ำ
-- หยุดถามผู้ใช้เฉพาะเมื่อมีปัญหาโครงสร้างสำคัญจริง เช่น premise ขัดกันเองหนัก, logic ของเรื่องพัง, หรือข้อมูลตั้งต้นขาดจนเดาอย่างปลอดภัยไม่ได้
+- ในโหมดนี้ ห้ามถามกลับเชิงอนุมัติระหว่างทาง เช่น `จะให้ทำต่อไหม` ให้รายงานความคืบหน้าแล้วเดินงานต่อเอง
+- หากพบปัญหาโครงสร้าง ตรรกะ หรือความยาว ให้ตัดสินใจซ่อมเอง ล็อก assumption หรือปรับเป้าหมายให้เหมาะกับงาน แล้วเดินต่อจนจบ workflow
 
 ## Step 0: Create Project Folder
 - ตั้ง slug ของเรื่อง เช่น `glass-city-rain`
@@ -46,10 +47,22 @@
 - เขียนตอนจริงใน `manuscript/projects/[project-slug]/episodes/`
 - หนึ่งตอนหนึ่งไฟล์ในสถานะ draft 1
 - ระหว่างเขียน ให้เปิดดูทั้ง scene plan, style guide และ continuity tracker
+- ถ้าผู้ใช้สั่งครั้งเดียวจบหรือมีเจตนาให้ทำทั้งเรื่อง ให้เดินต่อแบบ `continuous draft batches`
+- หนึ่ง batch ควรครอบคลุมหลายตอนต่อเนื่องตามขนาดงานที่ควบคุม continuity ได้ปลอดภัย
+- หลังจบแต่ละ batch ให้อัปเดต `manuscript/projects/[project-slug]/README.md` และ `manuscript/projects/index.md`
 
 ## Step 7: Update Continuity
-- หลังจบทุกตอน ให้อัปเดต `manuscript/projects/[project-slug]/continuity.md`
+- หลังจบทุกตอนหรืออย่างช้าที่สุดหลังจบแต่ละ batch ให้อัปเดต `manuscript/projects/[project-slug]/continuity.md`
 - บันทึกบาดแผล ความลับที่เปิดแล้ว สถานะความสัมพันธ์ และ open loops
+- ถ้าไม่มีปัญหาโครงสร้าง ให้เดินต่อไป draft quality gate โดยไม่ต้องถามผู้ใช้ซ้ำ
+
+## Step 8.5: Draft Quality Gate
+- ก่อนเข้า rewrite ให้ตรวจ prose ทั้งหมดก่อน
+- ตรวจว่าทุกตอนเป็น prose จริง ไม่ใช่สรุปหรือ template
+- ตรวจ word count รายตอนว่าอยู่ในช่วงเป้าหมาย ±20%
+- ตรวจ dialogue density: ทุกตอนต้องมี direct dialogue จริงอย่างน้อย 3 ช่วง
+- เปรียบเทียบคุณภาพ batch แรกกับ batch สุดท้าย
+- ถ้าตอนใดไม่ผ่าน → เขียนใหม่ตอนนั้นก่อนไป rewrite
 
 ## Step 8: Editorial Pass
 - ใช้ `editor-agent` ตรวจแต่ละตอนหรือทั้ง batch
@@ -91,10 +104,11 @@
 10. episode-map
 11. continuity
 12. episode prose (draft 1)
-13. editorial pass
-14. rewrite pass
-15. final continuity + word-count audit
-16. editorial polish pass
+13. draft quality gate
+14. editorial pass
+15. rewrite pass
+16. final continuity + word-count audit
+17. editorial polish pass
 
 ## เคล็ดลับ
 - อย่าเขียน prose ก่อนที่ scene function จะชัด
@@ -103,3 +117,4 @@
 - ถ้าฉากสวยแต่ไม่ขยับเรื่อง ให้ตัดหรือรวมฉากนั้น
 - ถ้าผู้ใช้สั่ง `ทำต่อจนจบ` ให้ตีความว่า workflow หลัง draft 1 สามารถเดิน `editorial pass -> rewrite -> final audit -> editorial polish` ต่อเนื่องได้ เว้นแต่มีปัญหาใหญ่จริง
 - ถ้าผู้ใช้ให้เพียงเรื่องย่อแล้วสั่ง `เริ่มทำ` ให้ถือว่านั่นคือคำสั่งครั้งเดียวที่ครอบคลุมทั้ง workflow เช่นกัน
+- เป้าหมายปริยายของระบบคือ one-command run: รับข้อมูลตั้งต้นครั้งเดียว แล้วสร้างตั้งแต่ outline ถึง polished draft โดยไม่ต้องรอคำสั่งย่อยระหว่าง episode batches, rewrite batches และ polish batches
