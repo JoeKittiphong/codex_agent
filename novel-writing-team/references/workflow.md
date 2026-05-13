@@ -149,9 +149,9 @@
   - หลังจบแต่ละ batch ให้อัปเดต `continuity.md`, `README.md` ของโปรเจกต์ และ `manuscript/projects/index.md`
   - เดินต่อจนกว่าจะครบ draft 1 ทั้งเรื่อง หรือจนพบปัญหาโครงสร้างสำคัญที่ต้องถามกลับ
 
-รูปแบบไฟล์แนะนำ:
-- `manuscript/projects/[project-slug]/episodes/ep-01-[slug].md`
-- `manuscript/projects/[project-slug]/episodes/ep-02-[slug].md`
+รูปแบบไฟล์ที่ได้จากขั้นนี้จะแยกเป็น 2 ส่วนคือ:
+- ไฟล์ Metadata: `manuscript/projects/[project-slug]/episodes/ep-01-[slug].md`
+- ไฟล์เนื้อหาพร้อมอ่าน (Prose): `output/[project-slug]/ep-01-[slug].md`
 
 ## ขั้นที่ 9: Rewrite Pass
 

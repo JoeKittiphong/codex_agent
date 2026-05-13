@@ -82,6 +82,10 @@ async function main() {
     await copyDir(templatesDir, projectDir)
     await mkdir(path.join(projectDir, 'episodes'), { recursive: true })
     await rm(path.join(projectDir, 'project-README.md'), { force: true }).catch(() => {})
+    
+    const outputDir = path.join(rootDir, 'output', slug)
+    await mkdir(outputDir, { recursive: true })
+
     await updateIndex()
 
     console.log(`Created project: manuscript/projects/${slug}/`)

@@ -171,7 +171,7 @@ Scene S01
 - ความยาวเป้าหมาย: 2500-3000 คำ หรือค่าตาม long-form plan
 ```
 
-## 7. Episode Manuscript
+## 7A. Episode Metadata
 
 ```text
 ไฟล์: manuscript/projects/[project-slug]/episodes/ep-01-[slug].md
@@ -185,9 +185,15 @@ Metadata
 - ความยาวเป้าหมาย: 2500-3000 คำ หรือค่าตาม long-form plan
 - สถานะต้นฉบับ: draft 1 / draft 2 / polished draft
 - Cliffhanger ท้ายตอน:
+```
 
-Prose:
-[นิยายภาษาไทยจริง มีทั้งบทบรรยายและบทพูด]
+## 7B. Episode Prose
+
+```text
+ไฟล์: output/[project-slug]/ep-01-[slug].md
+ตอนที่ 1: [ชื่อตอน]
+
+[เนื้อหานิยายภาษาไทยจริง มีทั้งบทบรรยายและบทพูดที่พร้อมอ่าน ไม่มี metadata หรือหัวข้อกำกับ]
 ```
 
 ## 8. Rewrite Log

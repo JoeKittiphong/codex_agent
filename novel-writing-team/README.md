@@ -69,9 +69,14 @@ novel-writing-team/
 │   │       ├── scenes.md
 │   │       ├── episode-map.md
 │   │       ├── continuity.md
-│   │       ├── episodes/       # ไฟล์นิยายรายตอน
+│   │       ├── episodes/       # ไฟล์ Metadata และแผนงานรายตอน
 │   │       └── ...
 │   └── templates/              # เทมเพลตสำหรับสร้างโปรเจกต์ใหม่
+│
+├── output/                     # โฟลเดอร์เก็บไฟล์เนื้อหานิยายที่พร้อมอ่าน (Prose)
+│   └── [project-slug]/         # แยกตามชื่อเรื่อง
+│       ├── ep-01-[slug].md
+│       └── ...
 │
 └── tools/
     └── new-project.mjs         # สคริปต์สร้างโปรเจกต์ใหม่

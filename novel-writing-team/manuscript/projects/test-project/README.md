@@ -1,0 +1,34 @@
+# Project README
+
+## ชื่อเรื่อง: Test Project
+## project slug: test-project
+## แนวเรื่อง:
+## โทนเรื่อง:
+## กลุ่มเป้าหมาย:
+## จำนวนตอนเป้าหมาย:
+## total word target:
+## สถานะปัจจุบัน:
+- [ ] series bible
+- [ ] style guide
+- [ ] three-act
+- [ ] 8 sequences
+- [ ] 27 points
+- [ ] longform plan
+- [ ] characters
+- [ ] world
+- [ ] scenes
+- [ ] episode map
+- [ ] continuity
+- [ ] episode drafts
+- [ ] rewrite pass
+- [ ] final continuity audit
+- [ ] editorial pass
+- [ ] editorial polish
+
+## หมายเหตุการทำงาน
+- POV:
+- tense:
+- ข้อห้ามสำคัญ:
+- เป้าหมายของ draft ล่าสุด:
+- batch ล่าสุดที่ทำถึง:
+- งาน batch ถัดไป:
