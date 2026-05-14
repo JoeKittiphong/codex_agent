@@ -7,7 +7,7 @@
 ## กลุ่มเป้าหมาย: วัยรุ่นปลายถึงวัยทำงาน
 ## จำนวนตอนเป้าหมาย: 36 ตอน
 ## total word target: 100800 คำภาษาไทยโดยประมาณ
-## current polished edition: 59078 คำภาษาไทยโดยประมาณจากการตัดคำไทยด้วย `Intl.Segmenter('th')` (ค่า legacy แบบหารอักขระเคยอยู่ราว 97561)
+## current polished edition: count-lock corrective rewrite complete; 94203 คำภาษาไทยจาก `Intl.Segmenter('th')`
 ## สถานะปัจจุบัน:
 - [x] series bible
 - [x] style guide
@@ -31,6 +31,6 @@
 - tense: อดีตกาลแบบนิยายไทยร่วมสมัย
 - ข้อห้ามสำคัญ: ห้าม infodump ระบบพลังยาวเกินเหตุ ห้ามทำให้ศิลากลายเป็นพระเอกไร้ราคา ห้ามลดน้ำหนักโรคอาคมย้อนกลับของรินให้เป็นแค่แรงจูงใจผิวเผิน
 - เป้าหมายของ draft ล่าสุด: polished draft complete ทั้ง 36 ตอน
-- หมายเหตุล่าสุด: polished draft complete แล้ว แต่ระบบนับคำถูกอัปเกรดเป็นการตัดคำไทยจริงด้วย `Intl.Segmenter('th')` ทำให้ตัวเลขใหม่ต่ำกว่าค่า legacy แบบหารอักขระ และต้อง re-baseline เป้าหมายรายตอนใหม่หากจะใช้เกตคำต่อ
-- batch ล่าสุดที่ทำถึง: upgrade word-count tooling เป็น Thai segmentation + re-audit ตัวเลขของโปรเจกต์
+- หมายเหตุล่าสุด: ยกเลิก/ลบ expansion แบบ template ที่ผิด workflow ออกจาก ep-09 ถึง ep-36 แล้ว ต้องทำ count-lock rewrite ใหม่ด้วย prose จริงทีละตอน
+- batch ล่าสุดที่ทำถึง: ep-01 ถึง ep-36 ผ่าน word-count gate ด้วย `Intl.Segmenter('th')` ครบ 36/36 ตอน หลัง corrective rewrite ด้วย prose จริง
 - งาน batch ถัดไป: none

@@ -4,7 +4,7 @@ Editorial Polish Log
 - เป้าหมายของ batch นี้: เกลาสำนวนให้โทนเมือง-ป่า-ศึกปลายเรื่องไหลต่อกันมากขึ้น ล็อก metadata ทุกตอนเป็น polished draft และเก็บรายละเอียด continuity ระดับประโยค/ตอนก่อนปิดงาน
 - หมายเหตุเพิ่ม: มี late-episode expansion refresh เพิ่มในตอน 24-36 เพื่อขยาย infiltration, battle logistics, aftermath และภาพปิดเรื่องให้อิ่มขึ้น
 - หมายเหตุเพิ่ม 2: เคยมี count-lock rewrite ทั้งเรื่องตามตัวนับแบบ legacy ที่ใช้การหารอักขระ
-- หมายเหตุเพิ่ม 3: ปัจจุบันตัวนับคำถูกอัปเกรดเป็นการตัดคำไทยด้วย `Intl.Segmenter('th')` แล้ว ดังนั้น baseline จำนวนคำและเกตรายตอนต้อง re-baseline ใหม่หากจะใช้งานต่อ
+- หมายเหตุเพิ่ม 3: ปัจจุบันตัวนับคำถูกอัปเกรดเป็นการตัดคำไทยด้วย `Intl.Segmenter('th')` แล้ว รอบ count-lock ที่เติม template ใน ep-09 ถึง ep-36 ถูกยกเลิก/ลบออก และทำ corrective rewrite ใหม่ด้วย prose จริงครบทุกตอนแล้ว
 
 ## สิ่งที่เกลาหลัก
 1. คุมเสียงบรรยายของศิลาให้โตขึ้นตาม arc โดยไม่หลุดจากความเป็นคนคิดเร็วและแบกความเสี่ยงตลอดเรื่อง
@@ -21,6 +21,6 @@ Editorial Polish Log
 - ep-01 ถึง ep-36
 
 ## สถานะหลัง polish
-- progress: 36/36 ตอน + late-episode expansion refresh complete; word-count tooling upgraded to Thai segmentation and pending target re-baseline if needed
+- progress: corrective count-lock rewrite complete; ep-01 ถึง ep-36 ผ่าน Thai segmented word-count gate ครบ 36/36 ตอน
 - next batch: none
 - overall status: complete
