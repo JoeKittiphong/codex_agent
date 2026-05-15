@@ -146,3 +146,10 @@
 - rewrite pass: เสร็จครบทั้งเรื่องแล้ว
 - เสร็จแล้ว: ตอน 1-36
 - สถานะต้นฉบับ: draft 2 complete / rewrite pass 1 complete
+
+
+## Workflow Rewrite Pass - 2026-05-14
+- ขอบเขต: ep-01 ถึง ep-36
+- ใช้ output draft เป็น prose source ชั่วคราวและ rebuild working source ใน manuscript/episodes
+- ขยายทุกตอนตาม longform target 2800-3200 คำ โดยอิง episode-map, character voice, style-guide และโทนไทยแฟนตาซี
+- เพิ่ม sensory immersion, direct dialogue และ emotional beat ก่อนส่งต่อ audit/polish
