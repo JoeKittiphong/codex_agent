@@ -7,6 +7,7 @@
 ## กลุ่มเป้าหมาย: วัยรุ่นปลายถึงผู้ใหญ่
 ## จำนวนตอนเป้าหมาย: 24 ตอน
 ## total word target: 42000-46000 คำภาษาไทย
+## current polished edition: 44,609 คำภาษาไทยโดยประมาณ
 ## สถานะปัจจุบัน:
 - [x] series bible
 - [x] style guide
@@ -20,13 +21,13 @@
 - [x] episode map
 - [x] continuity
 - [x] episode drafts
-- [ ] rewrite pass
-- [ ] final continuity audit
-- [ ] editorial pass
-- [ ] editorial polish
+- [x] rewrite pass
+- [x] final continuity audit
+- [x] editorial pass
+- [x] editorial polish
 
 ## หมายเหตุการทำงาน
 - POV: บุคคลที่สามจำกัดมุมมองสลับเฉพาะตัวละครที่ตื่นรู้ในฝัน โดยยึดภาคินเป็นแกนหลัก
 - tense: อดีตกาล
 - ข้อห้ามสำคัญ: ห้ามหลุดโทนร่วมสมัยไทย, ห้ามใช้คำอธิบายระบบพลังแบบเกมจัดเกินไป, ห้ามโรแมนซ์กลบพล็อตหลัก
-- เป้าหมายของ draft ล่าสุด: rebuild draft 1 ตอน 1-24 ใหม่ทั้งชุดด้วย chapter-writing workflow แล้ว รอ editorial pass + rewrite pass รอบจริง
+- เป้าหมายของ draft ล่าสุด: polished draft complete หลัง workflow rewrite/audit/polish รอบใหม่

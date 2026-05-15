@@ -18,3 +18,16 @@ Rewrite Log
   2. สาลิกาต้องมีผลข้างเคียงจากการอ่านเลือดสะสมจริงจนถึงพิธีใหญ่
   3. หน้ากากทองคำและเศษทองต้องเชื่อมกันชัดตั้งแต่ช่วงกลางเรื่องถึงตอนจบ
 - สถานะหลังรีไรต์: draft 2
+
+## Workflow Rewrite Pass - 2026-05-14
+- ขอบเขตที่รีไรต์: ep-01 ถึง ep-36 ทั้งเรื่อง ตามคำสั่งผู้ใช้ให้ยึด workflow/agent
+- Agent ที่ใช้ตาม workflow: orchestrator -> rewrite-agent -> quality gate เตรียมส่งต่อ continuity/final audit -> polish
+- แหล่งอ้างอิง: references/workflow.md, references/runbook.md, references/rewrite-pass.md, style-guide.md, scenes.md, episode-map.md, characters.md
+- สิ่งที่ทำ: กู้ working source จาก output ที่ finalize แล้ว, ตัดย่อหน้า editorial commentary/template prose, เขียน prose เหตุการณ์จริงเพิ่มเติมโดยอิง scene function/POV/ตัวละคร/จุดจบตอน, เพิ่มบทพูดตรงอย่างน้อย 3 ช่วงต่อตอน, เพิ่ม sensory detail และแรงกดดันเชิงกายภาพ
+- สถานะหลังรอบนี้: draft 2 / pending automated word-count gate and editorial polish
+
+## Word-count Expansion Gate - 2026-05-14
+- เพิ่ม prose เหตุการณ์จริงก่อนท้ายตอนให้ทุกตอนเข้าใกล้ช่วง 2500-3000 คำ โดยยังยึด scene plan/POV/Hook เดิม
+
+## Clean Workflow Rewrite - 2026-05-14
+- Rebuilt from HEAD output source; stripped meta/template commentary; expanded with scene-plan anchored prose and dialogue.

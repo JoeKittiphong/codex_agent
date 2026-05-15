@@ -30,3 +30,11 @@
 ## สถานะหลังรีไรต์
 - rebuild draft 1: complete
 - rewrite pass: ยังไม่เริ่ม เพราะต้องทำ editorial pass รอบใหม่ก่อน
+
+
+## Workflow Rewrite Pass - 2026-05-15
+- ขอบเขต: ep-01 ถึง ep-24
+- ยึด longform-plan เป็นหลักและ reconcile metadata จาก 2800-3200 เป็น 1700-2200 คำ เพื่อให้ตรง total target 42000-46000 คำ
+- ใช้ output draft 1 เป็น source ชั่วคราว เพราะ manuscript ถูก finalize เหลือ metadata-only
+- ขยายตอนที่ต่ำกว่าเกตด้วย prose เหตุการณ์จริงตาม scene plan/POV/character voice ไม่ใช่ meta commentary
+- สถานะ: draft 2 -> ส่งต่อ audit/polish

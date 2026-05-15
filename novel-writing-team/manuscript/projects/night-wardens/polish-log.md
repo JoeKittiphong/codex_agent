@@ -1,8 +1,8 @@
-# Editorial Polish Log
+# Polish Log: หน่วยพิทักษ์ราตรี
 
-สถานะปัจจุบัน:
-- ยังไม่เริ่ม
-- ห้ามเข้าสู่ polish จนกว่าจะมี draft 1 ที่ใช้งานได้จริง แล้วผ่าน rewrite pass และ final audit ก่อน
-
-## หมายเหตุ
-prose ตอน 1-24 ชุดปัจจุบันต้อง rebuild ใหม่ทั้งชุด ไม่ควร polish ต่อจากเวอร์ชันนี้
+## Editorial Polish Pass - 2026-05-15
+- ขอบเขต: ep-01 ถึง ep-24
+- Sync: `node tools/sync-output.mjs night-wardens`
+- ตรวจ: word-count PASS 24/24, world-opening PASS, prose authenticity PASS
+- ปรับสถานะตอนใน working source เป็น polished draft / workflow rewrite-polish complete
+- สถานะ: polished draft complete
